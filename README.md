@@ -1,4 +1,4 @@
-# Go-Back--ARQ-Client-Server-Protocol
+# Go-Back-ARQ-Client-Server-Protocol
 CSC 573 - Internet Protocols
 Project #2 - Implementation of Go-Back-N ARQ scheme
 ---------------------------------------------------
