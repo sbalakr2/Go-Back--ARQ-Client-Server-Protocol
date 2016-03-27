@@ -1,1 +1,48 @@
 # Go-Back--ARQ-Client-Server-Protocol
+CSC 573 - Internet Protocols
+Project #2 - Implementation of Go-Back-N ARQ scheme
+---------------------------------------------------
+
+Instructions to compile and execute the code:
+---------------------------------------------
+The above program requires java environment. The text file is placed in JRE System library. 
+The name of the file to be created at the server is given as command line argument.
+
+Steps to run the server code:
+-----------------------------
+1. In command prompt, go to the location of the “src” directory of the project
+2. Compile the code by executing the command: javac gopack\gobackServer.java
+3. Run the code by executing the command: java gopack.gobackServer #port <file-name> <probability>
+   #port - port number at which server is running
+   file-name - name of the file to be created or written into the directory
+   probability - probability with which the client is sending the packet
+   
+
+Steps to run the client code:
+-----------------------------
+1. In command prompt, go to the location of the “src” directory of the project
+2. Compile the code by executing the command: javac gopack\gobackClient.java
+3. Run the code by executing the command: java gopack.gobackClient #server-name #port <file-name> <N> <MSS>
+   #server-name - IP address of the server can be given as server-name. In case the server is running on the same computer, servername ="localhost"
+   #port - port number at which to start the server
+   file-name - name of the file to be sent
+   N - WindowSize of the server
+   MSS- Maximum segment size to be sent in a packet
+
+The file transfer is initiated and a file will be created at the server end with the name given in the command line.
+Data is transferred from the client to the server in the form of bytes.
+
+Error Conditions:
+-----------------
+The details for testing the error conditions are given below:
+
+1. Null Data
+If there is no data present in the file that client is sending , the connection will get closed.
+
+2. Server not running
+If the server is no more running , the connection gets closed. 
+
+3. File does not exist
+If the file we are trying to send from he client is not present in the directory, we get an error.
+
+
